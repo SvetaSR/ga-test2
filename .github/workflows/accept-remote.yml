@@ -1,0 +1,9 @@
+on:
+    repository_dispatch: 
+        type: ["hello"]
+
+jobs:
+    some-action:
+       steps:
+       - name: Print variables send from post
+         run: echo ${{ github.event.client_payload.name }}
