@@ -4,6 +4,7 @@ on:
 
 jobs:
     some-action:
-       steps:
-       - name: Print variables send from post
-         run: echo ${{ github.event.client_payload.name }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print variables send from post
+              run: echo ${{ github.event.client_payload.name }}
